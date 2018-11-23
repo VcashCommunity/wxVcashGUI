@@ -29,7 +29,7 @@ namespace wxGUI {
         static std::string transactionURL(const std::string &txid);
     };
 
-    class VcashProjectExplorer : public BlockExplorer {
+    class VanillaCashExplorer : public BlockExplorer {
     public:
         static const std::string URL;
         static std::string addressURL(const std::string &addr);

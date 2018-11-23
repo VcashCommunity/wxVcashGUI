@@ -86,14 +86,14 @@ AddressesPage::AddressesPage(VcashApp &vcashApp, wxWindow &parent)
         std::string address = onAddress ? listCtrl->GetItemText(index, Address).ToStdString() : "";
 
         enum PopupMenu {
-            Copy, VcashExplorer, VcashProjectExplorer, New, QR
+            Copy, VcashExplorer, VanillaCashExplorer, New, QR
         };
 
         wxMenu *explorers = new wxMenu();;
         explorers->Append(VcashExplorer, wxT("Vcash Explorer"));
         explorers->Enable(VcashExplorer, onAddress);
-        explorers->Append(VcashProjectExplorer, wxT("Vcash Project Explorer"));
-        explorers->Enable(VcashProjectExplorer, onAddress);
+        explorers->Append(VanillaCashExplorer, wxT("Vcash Project Explorer"));
+        explorers->Enable(VanillaCashExplorer, onAddress);
 
         wxMenu popupMenu;
         popupMenu.AppendSubMenu(explorers, wxT("&Block explorer"));
@@ -121,8 +121,8 @@ AddressesPage::AddressesPage(VcashApp &vcashApp, wxWindow &parent)
                 wxLaunchDefaultBrowser(VcashExplorer::addressURL(address));
                 break;
             }
-            case VcashProjectExplorer: {
-                wxLaunchDefaultBrowser(VcashProjectExplorer::addressURL(address));
+            case VanillaCashExplorer: {
+                wxLaunchDefaultBrowser(VanillaCashExplorer::addressURL(address));
                 break;
             }
             case New: {

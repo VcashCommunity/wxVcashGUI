@@ -9,7 +9,7 @@ In order to build wxVcashGUI, you will need to build firstly vcash.
 
 You can build vcash by using the script at:
 
-https://github.com/openvcash/vcash-scripts
+https://github.com/vcashcommunity/vcash-scripts/tree/vanilla
 
 The resulting build will be located at ~/vcash/.
 
@@ -20,7 +20,7 @@ has been tested on Windows 10 x64 with MSVC14 (Visual Studio 2015).
 
 Follow the following instructions to build vcash with Microsoft Visual Studio:
 
-https://github.com/openvcash/vcash/blob/master/platforms/windows/README.md
+https://github.com/vcashcommunity/vcash/blob/vanilla/platforms/windows/README.md
 
 For building with Visual Studio 2015, the only difference with respect to those instructions is to use the following command to build boost:
 ```
@@ -81,12 +81,12 @@ and go for a cup of coffee :) .
 
 ## On linux
 
-Download wxVcashGUI from https://github.com/openvcash/wxVcashGUI/archive/master.zip and uncompress this file inside your ~/vcash/src folder.
+Download wxVcashGUI from https://github.com/vcashcommunity/wxVcashGUI/archive/vanilla.zip and uncompress this file inside your ~/vcash/src folder.
 
 
 ## On Windows
 
-Download wxVcashGUI from https://github.com/openvcash/wxVcashGUI/archive/master.zip and uncompress this file inside your vcash-master folder (C:\vcash-master).
+Download wxVcashGUI from https://github.com/vcashcommunity/wxVcashGUI/archive/vanilla.zip and uncompress this file inside your vcash-vanilla folder (C:\vcash-vanilla).
 
 
 # Building libqrencode
@@ -97,7 +97,7 @@ libqrencode (https://github.com/fukuchi/libqrencode) library must be built previ
 
 cd to that directory:
 ```
-cd ~/vcash/src/wxVcashGUI-master/deps
+cd ~/vcash/src/wxVcashGUI-vanilla/deps
 ```
 
 Clone libqrencode library:
@@ -116,12 +116,12 @@ make
 
 Download the library from https://github.com/fukuchi/libqrencode/archive/master.zip 
 
-Uncompress this file to folder C:\vcash-master\wxVcashGUI-master\deps
+Uncompress this file to folder C:\vcash-vanilla\wxVcashGUI-vanilla\deps
 and rename folder libqrencode-master to libqrencode.
 
 cd to libqrencode directory:
 ```
-cd C:\vcash-master\wxVcashGUI-master\deps\libqrencode
+cd C:\vcash-vanilla\wxVcashGUI-vanilla\deps\libqrencode
 ```
 
 Build the library:
@@ -136,7 +136,7 @@ nmake /f makefile.vc
 
 cd to wxVcashGUI directory:
 ```
-cd ~/vcash/src/wxVcashGUI-master
+cd ~/vcash/src/wxVcashGUI-vanilla
 ```
 
 Enter the following commands:
@@ -149,7 +149,7 @@ make
 
 cd to wxVcashGUI directory:
 ```
-cd C:\vcash-master\wxVcashGUI-master
+cd C:\vcash-vanilla\wxVcashGUI-vanilla
 ```
 
 Enter the following command:
@@ -212,14 +212,14 @@ REGEDIT4
 "URL Protocol"=""
 
 [HKEY_CLASSES_ROOT\Vcash\DefaultIcon]
-@="\"C:\\vcash-master\\wxVcashGUI\\vc_mswu_x64\\vcash.exe""
+@="\"C:\\vcash-vanilla\\wxVcashGUI\\vc_mswu_x64\\vcash.exe""
 
 [HKEY_CLASSES_ROOT\Vcash\shell]
 
 [HKEY_CLASSES_ROOT\Vcash\shell\open]
 
 [HKEY_CLASSES_ROOT\Vcash\shell\open\command]
-@="\"C:\\vcash-master\\wxVcashGUI\\vc_mswu_x64\\vcash.exe\" --url=\"%1\""
+@="\"C:\\vcash-vanilla\\wxVcashGUI\\vc_mswu_x64\\vcash.exe\" --url=\"%1\""
 ```
 
 Save this file and double click on it to import its contents into the Windows Registry.                       
